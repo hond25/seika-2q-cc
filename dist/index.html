@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        /* swiper */
+        #swiper-container {
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+        .swiper-title {
+            text-align: center;
+            margin-top: 5px;
+        }
+        .swiper-slide div {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide div img {
+            width: 60%;
+            height: auto;
+        }
+        /* JustValdate */
+        #basic_form {
+            background-color: #dcdcdc;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 60%;
+            border-radius: 5px;
+        }
+        .field {
+            display: flex;
+            padding-bottom: 10px;
+        }
+        #name {
+            width: 80%;
+        }
+        #email {
+            width: 80%;
+        }
+        #password {
+            width: 80%;
+        }
+        #age {
+            width: 80%;
+        }
+        #address {
+            width: 80%;
+        }
+        label {
+            display: inline-block;
+            width: 30%;
+            margin-right: 5px;
+            font-weight: bold;
+        }
+        input {
+            display: inline-block;
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: rgb(0, 110, 255);
+            color: #ffffff;
+            border-radius: 5px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+<!--  -->
+<!-- swiper -->
+<!--  -->
+<div id="swiper-container">
+    <div>
+            <!-- Slider main container -->
+        <div class="swiper swiper-1">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide4</div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+
+        <div id="swiper-title" class="swiper-title"></div>
+    </div>
+
+    <div>
+        <div class="swiper swiper-2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <img src="/img/highland cow.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="/img/Siamese cat.jpg" alt="">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <img src="/img/titmouse.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <div id="swiper-title-2" class="swiper-title"></div>
+    </div>
+</div>
+
+<!--  -->
+<!-- JustValidate -->
+<!--  -->
+
+    <form id="basic_form">
+        <div class="field">
+            <label>名前</label>
+            <div id="name">
+                <input id="basic_name" name="name" type="text" placeholder="名前を入力してください。" />
+            </div>
+        </div>
+        <div class="field">
+            <label>メールアドレス</label>
+            <div id="email">
+                <input id="basic_email" name="email" type="text" placeholder="メールアドレスを入力してください。" />
+            </div>
+        </div>
+        <div class="field">
+            <label>パスワード</label>
+            <div id="password">
+                <input id="basic_password" name="password" type="text" placeholder="パスワードを入力してください。" />
+            </div>
+        </div>
+        <div class="field">
+            <label>年齢</label>
+            <div id="age">
+                <input id="basic_age" name="age" type="text" placeholder="年齢を入力してください" />
+            </div>
+        </div>
+        <div class="field">
+            <label>住所</label>
+            <div id="address">
+                <input id="basic_address" name="address" type="text" placeholder="住所を入力してください" />
+            </div>
+        </div>
+        <button type="submit">送信</button>
+    </form>
+    <script src="main.js"></script>
+</body>
+</html>

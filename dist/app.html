@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!-- 使用データ：https://www.ipss.go.jp/syoushika/tohkei/Data/Popular2006/01-15.html -->
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .chart-container {
+            width: 80%;
+            margin: auto;
+        }
+        .slider-container {
+            margin: 20px;
+        }
+        .slider-label {
+            margin-bottom: 10px;
+        }
+        #yearLabel {
+            font-weight: bold;
+            font-size: large;
+        }
+    </style>
+    <title>人口データ</title>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="myChart" width="auto" height="150"></canvas>
+    </div>
+    <div class="slider-container">
+        <div class="slider-label">selected: <span id="yearLabel">1950</span></div>
+        <input type="range" id="yearSlider" min="1950" max="2050" step="25" value="1950">
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    <script src="app.js"></script>
+</body>
+</html>
