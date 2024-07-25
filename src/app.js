@@ -58,6 +58,10 @@ let myChart = createChart(populationData[1950], 1950);
 yearSlider.addEventListener('input', () => {
   const selectedYear = parseInt(yearSlider.value);
   yearLabel.textContent = selectedYear;
-  myChart.destroy();
-  myChart = createChart(populationData[selectedYear], selectedYear);
+  // console.log(myChart.data?.datasets, populationData[selectedYear])
+  chartConfig.data.datasets[0].label = `${selectedYear}年`;
+  chartConfig.data.datasets[0].data = populationData[selectedYear];
+  myChart.update();
+  // myChart.destroy();
+  // myChart = createChart(populationData[selectedYear], selectedYear);
 });
