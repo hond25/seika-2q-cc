@@ -65,3 +65,4 @@ yearSlider.addEventListener('input', () => {
   // myChart.destroy();
   // myChart = createChart(populationData[selectedYear], selectedYear);
 });
+// 何か新しい機能を入れる　再生や他のデータとの組みあわせなど　今のやつはデフォルト少し触っただけに感じる
