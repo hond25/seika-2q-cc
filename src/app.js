@@ -65,4 +65,43 @@ yearSlider.addEventListener('input', () => {
   // myChart.destroy();
   // myChart = createChart(populationData[selectedYear], selectedYear);
 });
-// 何か新しい機能を入れる　再生や他のデータとの組みあわせなど　今のやつはデフォルト少し触っただけに感じる
+
+let isPlaying = false;
+let interval;
+const playButton = document.getElementById('playButton')
+const pauseButton = document.getElementById('pauseButton')
+
+const updateChartYear = (year) => {
+  yearLabel.textContent = year;
+  yearSlider.value = year;
+  chartConfig.data.datasets[0].label = '${year}年';
+  chartConfig.data.datasets[0].data = populationData[year];
+  myChart.update();
+};
+
+const startPlaying = () => {
+  if ("isPlaying") {
+    isPlaying = true;
+    interval = setInterval(() => {
+      let currentYear = parseInt(yearSlider.value);
+      currentYear += 25;
+      if (currentYear > 2050) currentYear = 1950;
+      updateChartYear(currentYear);
+    }, 800);
+  }
+};
+
+const stopPlaying = () => {
+  if (isPlaying) {
+    isPlaying = false;
+    clearInterval(interval);
+  }
+};
+
+playButton.addEventListener('click', startPlaying);
+pauseButton.addEventListener('click', stopPlaying);
+
+yearSlider.addEventListener('input', () => {
+  stopPlaying();
+});
+// 連続で再生ボタンを押すとバグる
