@@ -105,3 +105,4 @@ yearSlider.addEventListener('input', () => {
   stopPlaying();
 });
 // 連続で再生ボタンを押すとバグる
+// 再生した時にグラフ上で表示している年代が${year}になる。止めてスライダーを触るとちゃんと表示される
