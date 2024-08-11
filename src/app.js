@@ -82,6 +82,7 @@ const updateChartYear = (year) => {
 const startPlaying = () => {
   if ("isPlaying") {
     isPlaying = true;
+    playButton.disabled = true;
     interval = setInterval(() => {
       let currentYear = parseInt(yearSlider.value);
       currentYear += 25;
@@ -95,6 +96,7 @@ const stopPlaying = () => {
   if (isPlaying) {
     isPlaying = false;
     clearInterval(interval);
+    playButton.disabled = false;
   }
 };
 
